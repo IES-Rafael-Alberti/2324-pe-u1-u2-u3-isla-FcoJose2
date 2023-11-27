@@ -270,9 +270,9 @@ def simbolo_celda(celda):
 
 def imprimir_mapa_oculto(mapa: list):
     """Imprime el mapa sin revelar el tesoro ni las trampas."""
-    print("   " + " ".join(str(i+1) for i in range(DIMENSIONES)))
+    print("   " + " ".join(str(i) for i in range(DIMENSIONES)))
     for i, fila in enumerate(mapa, start=1):
-        print(f"{i:2} ", end="")
+        print(f"{i-1:2} ", end="")
         for celda in fila:
             print(simbolo_celda(celda), end=" ")
         print()
